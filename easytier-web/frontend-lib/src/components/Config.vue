@@ -34,6 +34,11 @@ const networking_methods = ref([
   { value: NetworkingMethod.Standalone, label: () => t('standalone') },
 ])
 
+const data_compress_algos = ref([
+  { value: 1, label: () => t('data_compress_algo_none') },
+  { value: 2, label: () => t('data_compress_algo_zstd') },
+])
+
 const protos: { [proto: string]: number } = {
   tcp: 11010,
   udp: 11010,
@@ -379,6 +384,18 @@ onMounted(() => {
                 </div>
               </div>
 
+              <div class="flex flex-row gap-x-9 flex-wrap w-full">
+                <div class="flex flex-col gap-2 grow p-fluid">
+                    <label for="data_compress_algo">{{ t('data_compress_algo') }}</label>
+                  <SelectButton
+                    id="data_compress_algo"
+                    v-model="curNetwork.data_compress_algo"
+                    :options="data_compress_algos"
+                    :option-label="(v) => v.label()"
+                    option-value="value"
+                  />
+                </div>
+              </div>
             </div>
           </Panel>
 

@@ -924,6 +924,7 @@ impl NetworkConfig {
         result.enable_magic_dns = Some(flags.accept_dns);
         result.mtu = Some(flags.mtu as i32);
         result.enable_private_mode = Some(flags.private_mode);
+        result.data_compress_algo = Some(flags.data_compress_algo);
 
         if flags.relay_network_whitelist == "*" {
             result.enable_relay_network_whitelist = Some(false);

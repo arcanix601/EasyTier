@@ -54,6 +54,7 @@ export interface NetworkConfig {
   disable_udp_hole_punching?: boolean
   disable_sym_hole_punching?: boolean
 
+  data_compress_algo?: number
   enable_relay_network_whitelist?: boolean
   relay_network_whitelist: string[]
 

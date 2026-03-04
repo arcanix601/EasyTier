@@ -125,6 +125,9 @@ relay_all_peer_rpc: Relay RPC Packets
 relay_all_peer_rpc_help: |
   Relay all peer rpc packets, even if the peer is not in the relay network whitelist.
   This can help peers not in relay network whitelist to establish p2p connection.
+data_compress_algo: Data Compression Algorithm
+data_compress_algo_none: No Compression
+data_compress_algo_zstd: Zstd Compression
 
 multi_thread: Multi Thread
 multi_thread_help: Use multi-thread runtime

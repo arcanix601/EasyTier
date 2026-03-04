@@ -185,6 +185,9 @@ mapped_listeners: 监听映射
 mapped_listeners_help: |
   手动指定监听器的公网地址，其他节点可以使用该地址连接到本节点。
   例如：tcp://123.123.123.123:11223，可以指定多个。
+data_compress_algo: 压缩算法
+data_compress_algo_none: 无压缩
+data_compress_algo_zstd: Zstd压缩
 
 status:
   version: 内核版本
